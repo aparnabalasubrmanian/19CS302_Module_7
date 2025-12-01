@@ -20,29 +20,27 @@ Developed by: Aparna RB
 RegisterNumber:  212222220005
 */
 #include <stdio.h>
+
 int main()
 {
-FILE *p;
-char name[100];
-int num;
-int id;
-char text[100];
-float m;
-scanf("%s",name);
-scanf("%d",&num);
-p=fopen("name","w");
-printf("%s Opened\n",name);
-{
-scanf("%d %s %f",&id,text,&m);
-fprintf(p,"%d %s %f",id,text,m);
+    FILE *fp;
+
+    fp = fopen("Hospital.txt", "w");
+    printf("Hospital.txt File Created Successfully\n");
+    printf("Hospital.txt File Opened\n");
+
+    fclose(fp);
+    printf("Hospital.txt File Closed");
+
+    return 0;
 }
-fclose(p);
-printf("Data added Successfully");
+
 ```
 
 ## Output:
 
-![image](https://github.com/user-attachments/assets/7f19090d-df95-4c0a-b411-7a926ff02ebf)
+<img width="816" height="153" alt="image" src="https://github.com/user-attachments/assets/91c2f577-9cc2-4daf-8e0f-1acd9bd6f522" />
+
 
 
 ## Result:
