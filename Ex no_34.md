@@ -20,26 +20,33 @@ roll numbers in to that file.
 Developed by: Aparna RB
 RegisterNumber:  212222220005
 */
-#include <stdio.h> 
+#include <stdio.h>
+
 int main()
 {
-FILE *p;
-char name[100]; 
-int num;
-int id;
-char text[100]; 
-float m; 
-scanf("%s",name);
-scanf("%d",&num);
-p=fopen("name","w"); 
-printf("%s Opened\n",name);
-{
-scanf("%d %s %f",&id,text,&m); 
-fprintf(p,"%d %s %f",id,text,m);
+    char filename[100];
+    int n, i, roll;
+    FILE *fp;
+
+    scanf("%s", filename);
+
+    fp = fopen(filename, "w");
+    printf("%s Opened\n", filename);
+
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &roll);
+        fprintf(fp, "%d\n", roll);
+    }
+
+    fclose(fp);
+    printf("Data added Successfully");
+
+    return 0;
 }
-fclose(p);
-printf("Data added Successfully");
-}
+
 ```
 
 ## Output:
