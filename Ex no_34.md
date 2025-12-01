@@ -50,7 +50,8 @@ int main()
 ```
 
 ## Output:
-![image](https://github.com/user-attachments/assets/f59a3640-abda-4dbd-8118-218ea7c2f8f5)
+<img width="757" height="147" alt="image" src="https://github.com/user-attachments/assets/2adec490-5600-45b8-9212-3c0ca3c93666" />
+
 
 ## Result:
 Thus the program was executed and the output was verified successfully.
