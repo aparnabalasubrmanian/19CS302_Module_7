@@ -19,24 +19,30 @@ To write a C program to find the smallest among three numbers using Structure.
 Developed by: Aparna RB
 RegisterNumber:  212222220005
 */
-#include<stdio.h> 
+#include <stdio.h>
+
+struct nums
+{
+    int a, b, c;
+};
+
 int main()
 {
-int a,b,c; 
-scanf("%d%d%d",&a,&b,&c); 
-if(a<b && a<c)
-{
-printf("%d is the smallest number.",a);
+    struct nums n;
+    scanf("%d %d %d", &n.a, &n.b, &n.c);
+
+    int smallest = n.a;
+
+    if (n.b < smallest)
+        smallest = n.b;
+    if (n.c < smallest)
+        smallest = n.c;
+
+    printf("%d is the smallest number.", smallest);
+
+    return 0;
 }
-else if(b<a && b<c)
-{
-printf("%d is the smallest number.",b);
-}
-else
-{
-printf("%d is the smallest number.",c);
-}
-}
+
 ```
 
 ## Output:
