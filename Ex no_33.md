@@ -18,17 +18,27 @@ To write a C program to read a file name from user and create that file using fo
 Developed by: Aparna RB
 RegisterNumber:  212222220005
 */
-#include <stdio.h> 
+#include <stdio.h>
+
 int main()
-{FILE *p;
-char name[40]; 
-scanf("%s",name);
-p=fopen("name","w");
-printf("%s File Created Successfully\n",name); 
-printf("%s File Opened\n",name);
-fclose(p);
-printf("%s File Closed",name);
+{
+    char filename[100];
+    FILE *fp;
+
+    scanf("%s", filename);
+
+    fp = fopen(filename, "w");
+    if (fp != NULL)
+        printf("%s File Created Successfully\n", filename);
+
+    printf("%s File Opened\n", filename);
+
+    fclose(fp);
+    printf("%s File Closed", filename);
+
+    return 0;
 }
+
 ```
 
 ## Output:
