@@ -20,20 +20,33 @@ using structure.
 Developed by: Aparna RB
 RegisterNumber:  212222220005
 */
-#include<stdio.h> 
+#include <stdio.h>
+
 struct hardware
 {
-char qr[10];
-char product[10]; 
-int price;
-}j[10];
+    char code[50];
+    char product[50];
+    int price;
+};
+
 int main()
 {
-int i; 
-for(i=0;i<3;i++)
-scanf("%s%s%d",j[i].qr,j[i].product,&j[i].price); 
-for(i=0;i<3;i++)
-printf("QRcode:%s\nproduct:%s\nprice :%d\n",j[i].qr,j[i].product,j[i].price);}
+    struct hardware h[3];
+    int i;
+
+    for (i = 0; i < 3; i++)
+        scanf("%s %s %d", h[i].code, h[i].product, &h[i].price);
+
+    for (i = 0; i < 3; i++)
+    {
+        printf("QRcode:%s\n", h[i].code);
+        printf("product:%s\n", h[i].product);
+        printf("price :%d\n", h[i].price);
+    }
+
+    return 0;
+}
+
 ```
 
 ## Output:
